@@ -1,0 +1,18 @@
+.contacts{
+   background-color: rgba(0, 0, 0, 0.3);
+   &__title{
+      
+      color: white;
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-size: 32px;
+      padding-left: 142px;
+      letter-spacing: 10%;
+      padding-top: 64px;
+      text-shadow: 0 5px 5px rgba(0, 0, 0, 1);
+   }
+   &__fields{
+      height: 250px;
+      
+   }
+}

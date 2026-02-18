@@ -1,1 +1,172 @@
-/*# sourceMappingURL=style.css.map */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.eot");
+  src: url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.main-bg {
+  background-image: url(../images/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1080px;
+  width: 1920px;
+  background-color: rgb(0, 0, 0);
+}
+
+.man-img {
+  position: absolute;
+  left: 1200px;
+}
+
+.title {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.title__name {
+  padding: 114px 0 0 142px;
+  font-size: 147px;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.607);
+}
+
+.about {
+  color: white;
+  font-family: "Roboto";
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.about__title {
+  font-weight: 500;
+  font-size: 32px;
+  padding-left: 142px;
+  letter-spacing: 10%;
+  padding-top: 64px;
+  text-shadow: 0 5px 5px rgb(0, 0, 0);
+}
+.about__text {
+  font-weight: 400;
+  font-size: 20px;
+  width: 1090px;
+  padding-left: 142px;
+  letter-spacing: 10%;
+  padding-top: 64px;
+  text-shadow: 0 5px 5px rgb(0, 0, 0);
+}
+
+.products {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: "Roboto";
+}
+.products__title {
+  font-weight: 500;
+  font-size: 32px;
+  padding-left: 142px;
+  letter-spacing: 10%;
+  padding-top: 64px;
+  text-shadow: 0 5px 5px rgb(0, 0, 0);
+}
+.products__container {
+  padding-top: 26px;
+  display: flex;
+  justify-content: start;
+  padding-left: 142px;
+}
+.products__container__item {
+  border: 3px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  margin-right: 12px;
+  font-size: 18px;
+}
+.products__container__item__text {
+  letter-spacing: 10%;
+  text-align: center;
+  margin: 15px 15px;
+  font-weight: 600;
+}
+.products__container__item:first-child {
+  background-color: rgb(104, 236, 248);
+  text-align: center;
+  color: black;
+}
+.products__container__item:first-child:hover {
+  background-color: rgba(104, 236, 248, 0.8);
+}
+.products__container__item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.contacts {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.contacts__title {
+  color: white;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 32px;
+  padding-left: 142px;
+  letter-spacing: 10%;
+  padding-top: 64px;
+  text-shadow: 0 5px 5px rgb(0, 0, 0);
+}
+.contacts__fields {
+  height: 250px;
+}/*# sourceMappingURL=style.css.map */
