@@ -1,0 +1,160 @@
+.main {
+   background-image: url(../images/background.svg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+   
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 1);
+   display: flex;
+   color: white;
+   font-family: "Roboto";
+   font-weight: 500;
+   overflow: auto;
+   &__preview{
+      position: relative;
+      width: 30%;
+      &-img{
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         width: 30vw;
+      }
+      @media screen and (max-width:992px) {
+         // background-color: red;
+         // width: 30%;
+      }
+
+   }
+
+   &__inner {
+      position: relative;
+      z-index: 1;
+      
+      padding-top: clamp(24px, 8vw ,114px);
+      padding-right: 50px;
+      padding-bottom: 0;
+      padding-left: clamp(32px,8vw,142px);
+      width: 65%;
+
+      @media screen and (max-width:992px) {
+         width: 100%;
+      }
+
+      &-logo{
+         width:  60vw;
+         margin-bottom: clamp(24px, 2vw ,64px);
+         
+      }
+
+      .item {
+         margin-bottom: clamp(24px, 2vw ,64px);
+         
+         &-title{
+            font-weight: 500;
+            font-size: 32px;
+            letter-spacing: 10%;
+            margin-bottom: 28px;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 1);
+            
+         }
+         &__description{
+            font-weight: 400;
+            font-size: 20px;
+            
+            text-indent: 20px;
+            letter-spacing: 10%;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 1);
+         }
+
+
+         &__products{
+            display: flex;
+            gap:20px;
+            flex-wrap: wrap;
+            &-item{
+               border: 3px solid white;
+               background-color: rgba(0, 0, 0, 0);
+               font-size: 18px;
+               letter-spacing: 10%;
+               text-align: center;
+               padding: 13.5px 24px;
+               font-weight: 500;
+               cursor: pointer;
+               transition: 0.5s;
+               box-sizing: border-box;
+               &:hover{
+                  border: 3px solid#6AECF8;
+                  background-color: #4FB5C0;
+                  
+                  color: black;
+               }
+            }
+            
+            }
+            
+            .form{
+               max-width: 596px;
+               display: flex;
+               flex-wrap: wrap;
+               
+               &__field{
+                  width: 48%;
+                  border-color: white;
+                  padding: 12px 10px 11px 14px;
+                  margin-right: 2%;
+                  margin-bottom: 2%;
+                  text-align: left;
+                  font-size: 20px;
+                  letter-spacing: 10%;
+                  &::placeholder{
+                     color: black;
+                  }
+               }
+               &__message{
+                  width: 100%;
+                  border-color: white;
+                  padding: 31px 13px;
+                  margin-right: 2%;
+                  margin-bottom: 2%;
+                  text-align: left;
+                  font-size: 20px;
+                  letter-spacing: 10%;
+                  &::placeholder{
+                     color: black;
+                  }
+               }
+
+               &__submit{
+                  border: 3px solid white;
+                  background-color: rgba(0, 0, 0, 0);
+                  font-size: 18px;
+                  letter-spacing: 10%;
+                  text-align: center;
+                  padding: 13.5px 24px;
+                  font-weight: 500;
+                  color:white;
+                  &:hover{
+                     background-color: rgba(255, 255, 255, 0.3);
+                     cursor: pointer;
+                     transition: 0.5s;
+                     box-sizing: border-box;
+                  }
+               }
+            }
+
+
+
+         }
+
+
+         }
+      
+
+
+      }
+
+   
+
+
