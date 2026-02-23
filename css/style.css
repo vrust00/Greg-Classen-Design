@@ -1,1 +1,201 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.eot");
+  src: url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.main {
+  background-image: url(../images/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 500;
+  overflow: auto;
+}
+.main__preview {
+  position: relative;
+  width: 30%;
+}
+.main__preview-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30vw;
+}
+.main__inner {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(24px, 8vw, 114px);
+  padding-right: 50px;
+  padding-bottom: 0;
+  padding-left: clamp(32px, 8vw, 142px);
+  width: 65%;
+}
+@media screen and (max-width: 992px) {
+  .main__inner {
+    width: 100%;
+  }
+}
+.main__inner-logo {
+  width: 60vw;
+  margin-bottom: clamp(24px, 2vw, 64px);
+}
+.main__inner .item {
+  margin-bottom: clamp(24px, 2vw, 64px);
+}
+.main__inner .item-title {
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: 10%;
+  margin-bottom: 28px;
+  text-shadow: 0 5px 5px rgb(0, 0, 0);
+}
+.main__inner .item__description {
+  font-weight: 400;
+  font-size: 20px;
+  text-indent: 20px;
+  letter-spacing: 10%;
+  text-shadow: 0 5px 5px rgb(0, 0, 0);
+}
+.main__inner .item__products {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.main__inner .item__products-item {
+  border: 3px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+  letter-spacing: 10%;
+  text-align: center;
+  padding: 13.5px 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+.main__inner .item__products-item:hover {
+  border: 3px solid #6AECF8;
+  background-color: #4FB5C0;
+  color: black;
+}
+.main__inner .item .form {
+  max-width: 596px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main__inner .item .form__field {
+  width: 48%;
+  border-color: white;
+  padding: 12px 10px 11px 14px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: 10%;
+}
+.main__inner .item .form__field::-moz-placeholder {
+  color: black;
+}
+.main__inner .item .form__field::placeholder {
+  color: black;
+}
+.main__inner .item .form__message {
+  width: 100%;
+  border-color: white;
+  padding: 31px 13px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: 10%;
+}
+.main__inner .item .form__message::-moz-placeholder {
+  color: black;
+}
+.main__inner .item .form__message::placeholder {
+  color: black;
+}
+.main__inner .item .form__submit {
+  border: 3px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+  letter-spacing: 10%;
+  text-align: center;
+  padding: 13.5px 24px;
+  font-weight: 500;
+  color: white;
+}
+.main__inner .item .form__submit:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: 0.5s;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */
