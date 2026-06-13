@@ -1,33 +1,27 @@
 .main {
-   background-image: url(../images/background.svg);
-   background-repeat: no-repeat;
-   background-size: cover;
-   
-   background-color: rgba(0, 0, 0, 1);
-   display: flex;
    color: white;
    font-family: "Roboto";
    font-weight: 500;
-   overflow:visible;
-   background-attachment: fixed;
-   min-height: 100vh;
-   &__content {
-      position: relative;
-      z-index: 1;
-      padding-top: clamp(24px, 8vw, 114px);
-      padding-right: 50px;
-      padding-bottom: 0;
-      padding-left: clamp(32px, 8vw, 142px);
-      width: 65%;
+   width: 58%;
+   
+   
+   
+      
+      
+      margin-top: clamp(24px, 8vw, 100px);
+      
+      margin-bottom: 0;
+      margin-left: clamp(32px, 8vw, 100px);
+      
 
-      @media screen and (max-width: 992px) {
-         width: 100%;
-      }
-   }
+      // @media screen and (max-width: 992px) {
+      //    width: 100%;
+      // }
+   
 
    // Логотип
    &__logo {
-      width: 60vw;
+      width: 100%;
       margin-bottom: clamp(24px, 2vw, 64px);
    }
 
@@ -38,42 +32,42 @@
 
    &__title {
       font-weight: 500;
-      font-size: 32px;
+      font-size: 28px;
       letter-spacing: 10%;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       text-shadow: 0 5px 5px rgba(0, 0, 0, 1);
    }
 
    &__text {
       font-weight: 400;
-      font-size: 20px;
+      font-size: 16px;
       text-indent: 20px;
       letter-spacing: 10%;
       text-shadow: 0 5px 5px rgba(0, 0, 0, 1);
-      
-      &:first-of-type {
-         margin-bottom: 20px;
-      }
    }
 
-   // Секция с продуктами
+   
    &__products-section {
+      
       margin-bottom: clamp(24px, 2vw, 64px);
    }
 
    &__products-grid {
+      width: 60%;
       display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+      gap: 15px;
+      flex-wrap: nowrap;
    }
 
    &__product {
-      border: 3px solid white;
+      border: 2px solid white;
       background-color: rgba(0, 0, 0, 0);
-      font-size: 18px;
+      font-size: 12px;
       letter-spacing: 10%;
       text-align: center;
-      padding: 13.5px 24px;
+      text-wrap-mode: nowrap;
+      padding: 2% 3%;
+      
       font-weight: 500;
       cursor: pointer;
       transition: 0.5s;
@@ -86,7 +80,7 @@
       }
    }
 
-   // Секция с формой
+   
    &__form-section {
       margin-bottom: clamp(24px, 2vw, 64px);
    }
@@ -147,20 +141,21 @@
 
    
    &__preview {
-      position: relative;
-      width: 35%;
-
+      
+      
+      
       @media screen and (max-width: 992px) {
          display: none;
       }
    }
 
    &__preview-img {
+      width: 33%;
       position: absolute;
-      bottom: 0;
+      bottom: -3px;
       right: 0;
-      width: 30vw;
-      max-width: 100%;
-      height: auto;
+      
+      
+      
    }
 }
