@@ -3,25 +3,19 @@
    font-family: "Roboto";
    font-weight: 500;
    width: 58%;
-      
-      margin-top: clamp(24px, 8vw, 100px);
-      
-      margin-bottom: 0;
-      margin-left: clamp(32px, 4vw, 100px);
-      
+   margin-top: clamp(24px, 8vw, 100px);
+   margin-bottom: 0;
+   margin-left: clamp(32px, 4vw, 100px);
 
-      @media screen and (max-width: 992px) {
-         width: 90%;
-      }
-   
+   @media screen and (max-width: 992px) {
+      width: 90%;
+   }
 
-   
    &__logo {
       width: 100%;
       margin-bottom: clamp(24px, 2vw, 64px);
    }
 
-   
    &__description {
       margin-bottom: clamp(24px, 2vw, 64px);
    }
@@ -42,9 +36,7 @@
       text-shadow: 0 5px 5px rgba(0, 0, 0, 1);
    }
 
-   
    &__products-section {
-      
       margin-bottom: clamp(24px, 2vw, 64px);
    }
 
@@ -68,7 +60,6 @@
       text-align: center;
       text-wrap-mode: nowrap;
       padding: 2% 3%;
-      
       font-weight: 500;
       cursor: pointer;
       transition: 0.5s;
@@ -81,7 +72,6 @@
       }
    }
 
-   
    &__form-section {
       margin-bottom: clamp(24px, 2vw, 64px);
    }
@@ -140,32 +130,50 @@
       }
    }
 
-   
+   // Десктопная версия (fixed справа)
    &__preview {
       position: fixed;
       bottom: 0;
       right: 5vw;
       width: 28%;
-      
+      height: 100vh;
       z-index: 2;
       pointer-events: none;
-      margin-right: -20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      // Мобильная версия (внизу на всю ширину)
       @media screen and (max-width: 992px) {
-         margin-top: -170px;
-         position: static;
-         bottom: 0;
-         height: 100%;
+         
+         position: relative;
+
          width: 100%;
+         height: auto;
+         margin-top: 20px;
+         margin-bottom: -5px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         
+         
       }
    }
 
    &__preview-img {
-      display: block;
-      width: calc(100% + 100px);
+      width: 100%;
       height: auto;
-      object-fit: cover;
-      object-position: center;
-      margin-left: -50px;          
-      margin-right: -50px;      
+      object-fit: contain;
+      display: block;
+
+      
+      @media screen and (max-width: 992px) {
+         width: 100%;
+         
+         
+         margin-left:10%;
+         margin-top: -30%;        
+         
+      }
    }
 }
