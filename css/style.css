@@ -21,6 +21,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  overscroll-behavior: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -70,26 +71,16 @@ table {
   background-image: url(../images/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
   background-color: rgb(0, 0, 0);
   display: flex;
   color: white;
   font-family: "Roboto";
   font-weight: 500;
-  overflow: auto;
+  overflow: visible;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
-.main__preview {
-  position: relative;
-  width: 30%;
-}
-.main__preview-img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 30vw;
-}
-.main__inner {
+.main__content {
   position: relative;
   z-index: 1;
   padding-top: clamp(24px, 8vw, 114px);
@@ -99,37 +90,43 @@ table {
   width: 65%;
 }
 @media screen and (max-width: 992px) {
-  .main__inner {
+  .main__content {
     width: 100%;
   }
 }
-.main__inner-logo {
+.main__logo {
   width: 60vw;
   margin-bottom: clamp(24px, 2vw, 64px);
 }
-.main__inner .item {
+.main__description {
   margin-bottom: clamp(24px, 2vw, 64px);
 }
-.main__inner .item-title {
+.main__title {
   font-weight: 500;
   font-size: 32px;
   letter-spacing: 10%;
   margin-bottom: 28px;
   text-shadow: 0 5px 5px rgb(0, 0, 0);
 }
-.main__inner .item__description {
+.main__text {
   font-weight: 400;
   font-size: 20px;
   text-indent: 20px;
   letter-spacing: 10%;
   text-shadow: 0 5px 5px rgb(0, 0, 0);
 }
-.main__inner .item__products {
+.main__text:first-of-type {
+  margin-bottom: 20px;
+}
+.main__products-section {
+  margin-bottom: clamp(24px, 2vw, 64px);
+}
+.main__products-grid {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
-.main__inner .item__products-item {
+.main__product {
   border: 3px solid white;
   background-color: rgba(0, 0, 0, 0);
   font-size: 18px;
@@ -141,17 +138,20 @@ table {
   transition: 0.5s;
   box-sizing: border-box;
 }
-.main__inner .item__products-item:hover {
+.main__product:hover {
   border: 3px solid #6AECF8;
   background-color: #4FB5C0;
   color: black;
 }
-.main__inner .item .form {
+.main__form-section {
+  margin-bottom: clamp(24px, 2vw, 64px);
+}
+.main__form {
   max-width: 596px;
   display: flex;
   flex-wrap: wrap;
 }
-.main__inner .item .form__field {
+.main__form-field {
   width: 48%;
   border-color: white;
   padding: 12px 10px 11px 14px;
@@ -161,13 +161,13 @@ table {
   font-size: 20px;
   letter-spacing: 10%;
 }
-.main__inner .item .form__field::-moz-placeholder {
+.main__form-field::-moz-placeholder {
   color: black;
 }
-.main__inner .item .form__field::placeholder {
+.main__form-field::placeholder {
   color: black;
 }
-.main__inner .item .form__message {
+.main__form-message {
   width: 100%;
   border-color: white;
   padding: 31px 13px;
@@ -176,14 +176,15 @@ table {
   text-align: left;
   font-size: 20px;
   letter-spacing: 10%;
+  resize: vertical;
 }
-.main__inner .item .form__message::-moz-placeholder {
+.main__form-message::-moz-placeholder {
   color: black;
 }
-.main__inner .item .form__message::placeholder {
+.main__form-message::placeholder {
   color: black;
 }
-.main__inner .item .form__submit {
+.main__form-submit {
   border: 3px solid white;
   background-color: rgba(0, 0, 0, 0);
   font-size: 18px;
@@ -192,10 +193,26 @@ table {
   padding: 13.5px 24px;
   font-weight: 500;
   color: white;
-}
-.main__inner .item .form__submit:hover {
-  background-color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   transition: 0.5s;
-  box-sizing: border-box;
+}
+.main__form-submit:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.main__preview {
+  position: relative;
+  width: 35%;
+}
+@media screen and (max-width: 992px) {
+  .main__preview {
+    display: none;
+  }
+}
+.main__preview-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30vw;
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */
