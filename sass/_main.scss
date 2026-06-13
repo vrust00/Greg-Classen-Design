@@ -3,29 +3,25 @@
    font-family: "Roboto";
    font-weight: 500;
    width: 58%;
-   
-   
-   
-      
       
       margin-top: clamp(24px, 8vw, 100px);
       
       margin-bottom: 0;
-      margin-left: clamp(32px, 8vw, 100px);
+      margin-left: clamp(32px, 4vw, 100px);
       
 
-      // @media screen and (max-width: 992px) {
-      //    width: 100%;
-      // }
+      @media screen and (max-width: 992px) {
+         width: 90%;
+      }
    
 
-   // Логотип
+   
    &__logo {
       width: 100%;
       margin-bottom: clamp(24px, 2vw, 64px);
    }
 
-   // Секция с описанием
+   
    &__description {
       margin-bottom: clamp(24px, 2vw, 64px);
    }
@@ -57,6 +53,11 @@
       display: flex;
       gap: 15px;
       flex-wrap: nowrap;
+
+      @media screen and (max-width: 992px) {
+         flex-wrap: wrap;
+         width: 100%;
+      }
    }
 
    &__product {
@@ -98,7 +99,7 @@
       margin-right: 2%;
       margin-bottom: 2%;
       text-align: left;
-      font-size: 20px;
+      font-size: clamp(11px, 2vw, 20px);
       letter-spacing: 10%;
 
       &::placeholder {
@@ -113,7 +114,7 @@
       margin-right: 2%;
       margin-bottom: 2%;
       text-align: left;
-      font-size: 20px;
+      font-size: clamp(15px, 4vw, 20px);
       letter-spacing: 10%;
       resize: vertical;
 
@@ -141,21 +142,30 @@
 
    
    &__preview {
+      position: fixed;
+      bottom: 0;
+      right: 5vw;
+      width: 28%;
       
-      
-      
+      z-index: 2;
+      pointer-events: none;
+      margin-right: -20px;
       @media screen and (max-width: 992px) {
-         display: none;
+         margin-top: -170px;
+         position: static;
+         bottom: 0;
+         height: 100%;
+         width: 100%;
       }
    }
 
    &__preview-img {
-      width: 33%;
-      position: absolute;
-      bottom: -3px;
-      right: 0;
-      
-      
-      
+      display: block;
+      width: calc(100% + 100px);
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      margin-left: -50px;          
+      margin-right: -50px;      
    }
 }

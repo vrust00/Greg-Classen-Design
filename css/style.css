@@ -57,11 +57,11 @@ table {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
   overflow: hidden;
   background-color: #000000;
+  width: 100%;
+  height: 100vh;
 }
 .main-bg__picture {
   position: absolute;
@@ -70,8 +70,21 @@ table {
   transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 100%;
-  width: 100vw;
-  height: 120vh;
+  width: auto;
+  height: auto;
+  -o-object-fit: none;
+     object-fit: none;
+}
+@media screen and (max-width: 992px) {
+  .main-bg {
+    position: fixed;
+    height: 100vh;
+  }
+  .main-bg__picture {
+    -o-object-fit: cover;
+       object-fit: cover;
+    min-height: 100vh;
+  }
 }
 
 @font-face {
@@ -95,7 +108,12 @@ table {
   width: 58%;
   margin-top: clamp(24px, 8vw, 100px);
   margin-bottom: 0;
-  margin-left: clamp(32px, 8vw, 100px);
+  margin-left: clamp(32px, 4vw, 100px);
+}
+@media screen and (max-width: 992px) {
+  .main {
+    width: 90%;
+  }
 }
 .main__logo {
   width: 100%;
@@ -126,6 +144,12 @@ table {
   display: flex;
   gap: 15px;
   flex-wrap: nowrap;
+}
+@media screen and (max-width: 992px) {
+  .main__products-grid {
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
 .main__product {
   border: 2px solid white;
@@ -160,7 +184,7 @@ table {
   margin-right: 2%;
   margin-bottom: 2%;
   text-align: left;
-  font-size: 20px;
+  font-size: clamp(11px, 2vw, 20px);
   letter-spacing: 10%;
 }
 .main__form-field::-moz-placeholder {
@@ -176,7 +200,7 @@ table {
   margin-right: 2%;
   margin-bottom: 2%;
   text-align: left;
-  font-size: 20px;
+  font-size: clamp(15px, 4vw, 20px);
   letter-spacing: 10%;
   resize: vertical;
 }
@@ -201,14 +225,32 @@ table {
 .main__form-submit:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+.main__preview {
+  position: fixed;
+  bottom: 0;
+  right: 5vw;
+  width: 28%;
+  z-index: 2;
+  pointer-events: none;
+  margin-right: -20px;
+}
 @media screen and (max-width: 992px) {
   .main__preview {
-    display: none;
+    margin-top: -170px;
+    position: static;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
   }
 }
 .main__preview-img {
-  width: 33%;
-  position: absolute;
-  bottom: -3px;
-  right: 0;
+  display: block;
+  width: calc(100% + 100px);
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-left: -50px;
+  margin-right: -50px;
 }/*# sourceMappingURL=style.css.map */
