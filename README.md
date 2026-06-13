@@ -1,7 +1,7 @@
 # Лендинг дизайнера «Greg Classen»
 
 **Главная страница**  
-![Главная](images/screenshot_full.png)
+![Главная](images/images_for_READme/screenshot_full.png)
 
 ##  Посмотреть сайт
 **[Открыть демо](https://vrust00.github.io/Greg-Classen-Design/)**
@@ -23,7 +23,7 @@
 - Форма обратной связи с валидацией полей
 
 **Как выглядит на разных устройствах**  
-![Адаптивность](images/adaptive.png)
+![Адаптивность](images/images_for_READme/adaptive.png)
 
 ##  Как запустить у себя
 1. Склонируйте репозиторий (cmd):  
