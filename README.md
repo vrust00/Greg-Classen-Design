@@ -1,4 +1,4 @@
-# Лендинг дизайнера «Greg Classen»
+# Лендинг дизайнера «Greg Klassen»
 
 **Главная страница**  
 ![Главная](images/images_for_READme/screenshot_full.png)
