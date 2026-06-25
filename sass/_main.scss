@@ -130,7 +130,7 @@
       }
    }
 
-   // Десктопная версия (fixed справа)
+   
    &__preview {
       position: fixed;
       bottom: 0;
@@ -143,7 +143,7 @@
       align-items: flex-end;
       justify-content: flex-end;
 
-      // Мобильная версия (внизу на всю ширину)
+      
       @media screen and (max-width: 992px) {
          
          position: relative;
@@ -176,4 +176,17 @@
          
       }
    }
+
+
+   
+}
+
+.fade{
+   opacity: 0;
+   transform: translateY(15px);
+   transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade.visible{
+   opacity: 1;
+   transform: translateY(0);
 }
